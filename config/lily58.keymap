@@ -9,6 +9,21 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        HRM_Left_Shift: HRM_Left_Shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LEFT_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <27>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,11 +37,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6  &kp N7    &kp N8     &kp N9   &kp N0         &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp F     &kp P     &kp G                                  &kp J   &kp L     &kp U      &kp Y    &kp SEMICOLON  &kp MINUS
-&kp LCTRL  &kp A   &kp R   &kp S     &kp T     &kp D                                  &kp H   &kp N     &kp E      &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B          &kp LBKT     &kp RBKT   &kp K   &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
-                           &kp LALT  &kp LGUI  &kp BACKSPACE  &kp ENTER    &kp SPACE  &none   &kp BSPC  &tog 1
+&kp ESC    &kp N1  &kp N2  &kp N3                        &kp N4    &kp N5                                 &kp N6  &kp N7    &kp N8     &kp N9   &kp N0         &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp F                         &kp P     &kp G                                  &kp J   &kp L     &kp U      &kp Y    &kp SEMICOLON  &kp MINUS
+&kp LCTRL  &kp A   &kp R   &HRM_Left_Shift LEFT_SHIFT S  &kp T     &kp D                                  &kp H   &kp N     &kp E      &kp I    &kp O          &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C                         &kp V     &kp B          &kp LBKT     &kp RBKT   &kp K   &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                           &kp LALT                      &kp LGUI  &kp BACKSPACE  &kp ENTER    &kp SPACE  &none   &kp BSPC  &tog 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

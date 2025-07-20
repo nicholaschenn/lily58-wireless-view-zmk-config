@@ -29,46 +29,23 @@
         compatible = "zmk,combos";
 
         Copy {
-            bindings = <&Shift_C>;
+            bindings = <&kp LC(C)>;
             key-positions = <38 39>;
         };
 
         Paste {
-            bindings = <&Shift_V>;
+            bindings = <&kp LC(K)>;
             key-positions = <39 40>;
         };
 
         Cut {
-            bindings = <&Shift_X>;
+            bindings = <&kp LC(X)>;
             key-positions = <40 38>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <33 34>;
-        };
-    };
-
-    macros {
-        Shift_C: Shift_C {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp C>;
-            label = "SHIFT_C";
-        };
-
-        Shift_V: Shift_V {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp V>;
-            label = "SHIFT_V";
-        };
-
-        Shift_X: Shift_X {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp X>;
-            label = "SHIFT_X";
         };
     };
 

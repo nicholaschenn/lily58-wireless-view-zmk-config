@@ -29,12 +29,12 @@
         compatible = "zmk,combos";
 
         Copy {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LC(INSERT)>;
             key-positions = <38 39>;
         };
 
         Paste {
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LS(INSERT)>;
             key-positions = <39 40>;
         };
 

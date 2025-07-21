@@ -23,6 +23,20 @@
             require-prior-idle-ms = <130>;
             hold-trigger-on-release;
         };
+
+        thumb_shift: thumb_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_SHIFT";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <53 54>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <130>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -62,11 +76,11 @@
 
             display-name = "Colemak";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6     &kp N7  &kp N8      &kp N9   &kp N0         &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp F     &kp P     &kp G                           &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON  &kp MINUS
-&kp LCTRL  &kp A   &kp R   &kp S     &kp T     &kp D                           &kp H      &kp N   &kp E       &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B          &mo 3    &tog 1  &kp K      &kp M   &kp COMMA   &kp DOT  &kp FSLH       &kp RSHFT
-                           &kp LALT  &kp LGUI  &kp BACKSPACE  &mo 4    &mo 5   &kp SPACE  &none   &caps_word
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                                                  &kp N6     &kp N7  &kp N8      &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp F     &kp P     &kp G                                                                   &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON  &kp EQUAL
+&kp LCTRL  &kp A   &kp R   &kp S     &kp T     &kp D                                                                   &kp H      &kp N   &kp E       &kp I    &kp O          &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B          &mo 3                        &tog 1                      &kp K      &kp M   &kp COMMA   &kp DOT  &kp FSLH       &kp RSHFT
+                           &kp LALT  &kp LGUI  &kp BACKSPACE  &thumb_shift 4 LEFT_SHIFT    &thumb_shift 5 RIGHT_SHIFT  &kp SPACE  &none   &caps_word
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

@@ -67,8 +67,8 @@
             key-positions = <27 26 28>;
         };
 
-        Delete {
-            bindings = <&kp DELETE>;
+        CTRL_Backspace {
+            bindings = <&kp LC(BACKSPACE)>;
             key-positions = <14 15>;
         };
     };
@@ -87,7 +87,7 @@
             display-name = "Colemak";
             bindings = <
 &kp ESC         &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6     &kp N7  &kp N8      &kp N9   &kp N0         &kp UNDERSCORE
-&none           &kp Q   &kp W   &kp F   &kp P   &kp G                           &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON  &kp EQUAL
+&kp DELETE      &kp Q   &kp W   &kp F   &kp P   &kp G                           &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON  &kp EQUAL
 &kp TAB         &kp A   &kp R   &kp S   &kp T   &kp D                           &kp H      &kp N   &kp E       &kp I    &kp O          &kp SQT
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B          &mo 6    &tog 1  &kp K      &kp M   &kp COMMA   &kp DOT  &kp SLASH      &kp RIGHT_SHIFT
                                 &none   &mo 2   &kp BACKSPACE  &mo 4    &mo 4   &kp SPACE  &mo 3   &caps_word

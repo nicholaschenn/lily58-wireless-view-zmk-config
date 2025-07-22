@@ -76,11 +76,11 @@
 
             display-name = "Colemak";
             bindings = <
-&kp ESC    &kp N1             &kp N2  &kp N3    &kp N4    &kp N5                                                                  &kp N6     &kp N7  &kp N8      &kp N9   &kp N0                  &kp UNDERSCORE
-&kp TAB    &kp Q              &kp W   &kp F     &kp P     &kp G                                                                   &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON           &kp EQUAL
-&kp LCTRL  &kp A              &kp R   &kp S     &kp T     &kp D                                                                   &kp H      &kp N   &kp E       &kp I    &kp O                   &kp SQT
-&kp LSHFT  &HRM LEFT_SHIFT Z  &kp X   &kp C     &kp V     &kp B          &mo 3                        &tog 1                      &kp K      &kp M   &kp COMMA   &kp DOT  &HRM RIGHT_SHIFT SLASH  &kp RSHFT
-                                      &kp LALT  &kp LGUI  &kp BACKSPACE  &thumb_shift 4 LEFT_SHIFT    &thumb_shift 5 RIGHT_SHIFT  &kp SPACE  &none   &caps_word
+&kp ESC         &kp N1             &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6     &kp N7  &kp N8      &kp N9   &kp N0                  &kp UNDERSCORE
+&kp TAB         &kp Q              &kp W   &kp F   &kp P   &kp G                           &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON           &kp EQUAL
+&kp LCTRL       &kp A              &kp R   &kp S   &kp T   &kp D                           &kp H      &kp N   &kp E       &kp I    &kp O                   &kp SQT
+&kp LEFT_SHIFT  &HRM LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp B          &mo 7    &tog 1  &kp K      &kp M   &kp COMMA   &kp DOT  &HRM RIGHT_SHIFT SLASH  &kp RIGHT_SHIFT
+                                           &none   &mo 4   &kp BACKSPACE  &mo 2    &mo 3   &kp SPACE  &mo 4   &caps_word
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,6 +96,42 @@
             >;
 
             label = "QWERTY";
+        };
+
+        Nav {
+            bindings = <
+&trans  &trans        &trans        &trans          &trans            &trans                    &trans  &trans    &trans    &trans     &trans   &trans
+&trans  &trans        &trans        &trans          &trans            &trans                    &trans  &kp BSPC  &kp UP    &kp DEL    &trans   &trans
+&trans  &kp LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET  &trans
+&trans  &trans        &trans        &trans          &trans            &trans  &trans    &trans  &trans  &kp TAB   &trans    &trans     &trans   &trans
+                                    &trans          &trans            &trans  &trans    &trans  &trans  &trans    &trans
+            >;
+
+            label = "Nav";
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans  &trans  &kp FSLH  &kp STAR    &kp PLUS                         &trans  &trans             &trans           &trans         &trans         &trans
+&trans  &trans  &kp N7  &kp N8    &kp N9      &kp MINUS                        &trans  &trans             &trans           &trans         &trans         &trans
+&trans  &kp N0  &kp N4  &kp N5    &kp N6      &kp PERIOD                       &trans  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT  &sk RIGHT_ALT  &kp RIGHT_GUI  &trans
+&trans  &trans  &kp N1  &kp N2    &kp N3      &trans      &trans       &trans  &trans  &trans             &trans           &trans         &trans         &trans
+                        &none     &kp PERIOD  &kp SPACE   &kp ENTER    &trans  &trans  &trans             &trans
+            >;
+
+            label = "Numpad";
+        };
+
+        Sym {
+            bindings = <
+&trans  &trans           &trans         &trans            &trans             &trans                         &trans       &trans                &trans                 &trans         &trans             &trans
+&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                       &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &trans             &trans
+&trans  &kp EXCLAMATION  &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPS                       &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT  &trans    &trans  &kp AT_SIGN  &kp COLON             &trans                 &trans         &kp SQT            &trans
+                                        &trans            &trans             &trans       &trans    &trans  &trans       &trans                &trans
+            >;
+
+            label = "Sym";
         };
 
         raise_layer {
@@ -136,30 +172,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        Nav {
-            bindings = <
-&trans  &trans        &trans        &trans          &trans            &trans                    &trans  &trans    &trans    &trans     &trans   &trans
-&trans  &trans        &trans        &trans          &trans            &trans                    &trans  &kp BSPC  &kp UP    &kp DEL    &trans   &trans
-&trans  &kp LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET  &trans
-&trans  &trans        &trans        &trans          &trans            &trans  &trans    &trans  &trans  &kp TAB   &trans    &trans     &trans   &trans
-                                    &trans          &trans            &trans  &trans    &trans  &trans  &trans    &trans
-            >;
-
-            label = "Nav";
-        };
-
-        Numpad {
-            bindings = <
-&trans  &trans  &trans  &kp FSLH  &kp STAR  &kp PLUS                         &trans  &trans             &trans           &trans         &trans         &trans
-&trans  &trans  &kp N7  &kp N8    &kp N9    &kp MINUS                        &trans  &trans             &trans           &trans         &trans         &trans
-&trans  &kp N0  &kp N4  &kp N5    &kp N6    &kp PERIOD                       &trans  &sk RIGHT_CONTROL  &sk RIGHT_SHIFT  &sk RIGHT_ALT  &kp RIGHT_GUI  &trans
-&trans  &trans  &kp N1  &kp N2    &kp N3    &trans      &trans       &trans  &trans  &trans             &trans           &trans         &trans         &trans
-                        &kp N0    &none     &kp DOT     &kp ENTER    &trans  &trans  &trans             &trans
-            >;
-
-            label = "Numpad";
         };
 
         extra_1 {

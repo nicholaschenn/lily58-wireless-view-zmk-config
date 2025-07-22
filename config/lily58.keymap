@@ -79,7 +79,7 @@
 &kp ESC         &kp N1             &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6     &kp N7  &kp N8      &kp N9   &kp N0                  &kp UNDERSCORE
 &kp TAB         &kp Q              &kp W   &kp F   &kp P   &kp G                           &kp J      &kp L   &kp U       &kp Y    &kp SEMICOLON           &kp EQUAL
 &kp LCTRL       &kp A              &kp R   &kp S   &kp T   &kp D                           &kp H      &kp N   &kp E       &kp I    &kp O                   &kp SQT
-&kp LEFT_SHIFT  &HRM LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp B          &mo 7    &tog 1  &kp K      &kp M   &kp COMMA   &kp DOT  &HRM RIGHT_SHIFT SLASH  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &HRM LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp B          &mo 6    &tog 1  &kp K      &kp M   &kp COMMA   &kp DOT  &HRM RIGHT_SHIFT SLASH  &kp RIGHT_SHIFT
                                            &none   &mo 4   &kp BACKSPACE  &mo 2    &mo 3   &kp SPACE  &mo 4   &caps_word
             >;
 

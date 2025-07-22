@@ -59,12 +59,12 @@
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <55 32 33>;
+            key-positions = <32 33 31>;
         };
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <52 27 26>;
+            key-positions = <27 26 28>;
         };
 
         Delete {

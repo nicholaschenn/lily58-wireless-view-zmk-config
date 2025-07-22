@@ -43,12 +43,12 @@
         compatible = "zmk,combos";
 
         Copy {
-            bindings = <&kp LC(INSERT)>;
+            bindings = <&kp LC(C)>;
             key-positions = <38 39>;
         };
 
         Paste {
-            bindings = <&kp LS(INSERT)>;
+            bindings = <&kp LC(V)>;
             key-positions = <39 40>;
         };
 
@@ -59,12 +59,17 @@
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <33 34>;
+            key-positions = <55 32 33>;
         };
 
-        Enter2 {
-            bindings = <&kp ENTER>;
-            key-positions = <55 32 33>;
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <52 27 26>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <14 15>;
         };
     };
 

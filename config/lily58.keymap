@@ -112,7 +112,7 @@
             bindings = <
 &trans  &trans        &trans        &trans          &trans            &trans                    &trans  &trans    &trans    &trans     &trans   &trans
 &trans  &trans        &trans        &trans          &trans            &trans                    &trans  &kp BSPC  &kp UP    &kp DEL    &trans   &trans
-&trans  &kp LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET  &trans
+&trans  &kp LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &trans                    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &trans
 &trans  &trans        &trans        &trans          &trans            &trans  &trans    &trans  &trans  &kp TAB   &trans    &trans     &trans   &trans
                                     &trans          &trans            &trans  &trans    &trans  &trans  &trans    &trans
             >;
